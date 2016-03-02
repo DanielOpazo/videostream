@@ -2,40 +2,47 @@
 <?php
 require('CameraFeed.php');
 ?>
-<html>
+<html lang="en">
 	<head>
-		<link rel='stylesheet' type='text/css' href='streamstyle.css' />
-		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
-		<script type='text/javascript' src='streamjs.js'></script>
 		<title>Live Stream</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel='stylesheet' type='text/css' href='streamstyle.css' />
+		<script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<!-- my javascript -->
+		<script type='text/javascript' src='streamjs.js'></script>
 	</head>
 	<body>
-		<p>
-        		<?php echo date('Y-m-d H:i:s');?>
-		</p>
+	<div class="container-fluid">
 		<h1>Camera Feeds</h1>
-			<table>
-			<tr>
-				<?php
-                        		//$camera1 = new CameraFeed("bedroom", "http://192.168.0.18:8080/stream");
-					//$camera2 = new CameraFeed("kitchen", "http://192.168.0.18:8080/stream");
-					//$camerasList = array($camera1, $camera2);
-					//file_put_contents("cameras/cameras.json", json_encode($camerasList));
-					$camerasListFromJson = json_decode(file_get_contents("cameras/cameras.json"));
-					$camerasList = array();
-					foreach  ($camerasListFromJson as $camera) {
-						echo $camera->name . " " . $camera->url;
-						array_push($camerasList, new CameraFeed($camera->name, $camera->url));
+		<?php
+			$camerasList = getCamerasListFromFile();
+			$count = 0;
+			foreach($camerasList as $feed) {
+				if (($count % 3) == 0) {
+					if ($count != 0) {
+						echo "</div>";
 					}
-					$cameras = array("http://192.168.0.18:8080/stream", "http://192.168.0.41:8080/stream", "http://192.168.0.18:8080/stream");
-					foreach($camerasList as $feed) {
-						echo "<td><p>".$feed->getName()."</p><p><div class='iframe'><iframe src=".$feed->getUrl()."></iframe><div class=\"overlay\"></div></p></td>";
-					}
-				?>
-				</td>
-                        </tr>
-			<table>
-		<div id="newFeed"><a href=<?php $_SERVER["HTTP_HOST"];?>/newFeed.php>Add New Feed</a></div>
-		<div id="removeFeed"><a href=<?php $_SERVER["HTTP_HOST"];?>/removeFeed.php>Remove Feed</a></div>
-	</body>
+					echo "<div class='row'>";
+					$temp = $count % 3;
+				}
+				echo "<div class='col-sm-4' style='background-color:lavender;'><h3>".$feed->getName()."</h3><div class='iframe'><iframe src=".$feed->getUrl()."></iframe><div class=\"overlay\"></div></div></div>";
+				$count++;
+			}
+			if ((($count) % 3) != 0) {
+				echo "</div>";
+			}
+		?>
+		<div class="row">
+			<div class="col-sm-6"><div id="newFeed"><a href=<?php $_SERVER["HTTP_HOST"];?>/newFeed.php>Add New Feed</a></div></div>
+			<div class="col-sm-6"><div id="removeFeed"><a href=<?php $_SERVER["HTTP_HOST"];?>/removeFeed.php>Remove Feed</a></div></div>
+		</div>
+</div>	
+	
+	
+</body>
 </html>
