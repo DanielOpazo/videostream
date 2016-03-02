@@ -30,7 +30,7 @@ require('CameraFeed.php');
 					echo "<div class='row'>";
 					$temp = $count % 3;
 				}
-				echo "<div class='col-sm-4' style='background-color:lavender;'><h3>".$feed->getName()."</h3><div class='iframe'><iframe src=".$feed->getUrl()."></iframe><div class=\"overlay\"></div></div></div>";
+				echo "<div class='col-sm-4'><div class='bg-info'>".$feed->getName()."</div><div class='embed-responsive embed-responsive-4by3'><iframe src=".$feed->getUrl()."></iframe><div class=\"overlay\"></div></div></div>";
 				$count++;
 			}
 			if ((($count) % 3) != 0) {
