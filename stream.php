@@ -24,8 +24,8 @@ require('CameraFeed.php');
 		</div>
 		<ul class="nav navbar-nav">
 			<li><a href="#">Home</a></li>
-			<li class="active"><a href="#">Live Feeds</a></li>
-			<li><a href="#">Add Feed</a></li> 
+			<li class="active"><a href=<?php $_SERVER["HTTP_HOST"];?>/stream.php>Live Feeds</a></li>
+			<li><a href=<?php $_SERVER["HTTP_HOST"];?>/newFeed.php>Add Feed</a></li> 
 			<li><a href="#">Remove Feed</a></li>
 			<li><a href="#">About</a></li>
 			<li class="dropdown">

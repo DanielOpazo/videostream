@@ -4,6 +4,7 @@ require('CameraFeed.php');
 ?>
 <html>
 <head>
+	<title>Add New Feed</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel='stylesheet' type='text/css' href='newfeedstyle.css' />
@@ -12,10 +13,31 @@ require('CameraFeed.php');
 	<script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<!-- Latest compiled JavaScript -->
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<title>Add New Feed</title>
 </head>
 <body>
-
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">Video Surveillance System Dashboard</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li><a href="#">Home</a></li>
+			<li><a href=<?php $_SERVER["HTTP_HOST"];?>/stream.php>Live Feeds</a></li>
+			<li class="active"><a href=<?php $_SERVER["HTTP_HOST"];?>/newFeed.php>Add Feed</a></li> 
+			<li><a href="#">Remove Feed</a></li>
+			<li><a href="#">About</a></li>
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Careers
+				<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Dropdown Menu Maker</a></li>
+					<li><a href="#">List Item Creator</a></li>
+					<li><a href="#">Caterer</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	</nav>
 <?php
 $nameError = $addressError = "";
 $name = $address = "";
@@ -55,7 +77,7 @@ function clean_input($data) {
 	return $data;
 }
 ?>
-
+<!--
 <h2>Add New Camera Feed</h2>
 <p><span class="error">* required field</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
@@ -67,14 +89,27 @@ function clean_input($data) {
 	<br><br>
 	<input type="submit" name="submit" value="Submit">
 </form>
-<div class="container-fluid">
-  <h1>Hello World!</h1>
-  <p>Resize the browser window to see the effect.</p>
-  <div class="row">
-    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
-    <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
-    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
-  </div>
+-->
+<div class="container">
+<form role="form">
+	<div class="form-group">
+		<label for="name">Camera Name:</label>
+		<input type="text" class="form-control" id="name" placeholder="Enter Camera name">
+	</div>
+	<div class="form-group">
+		<label for="address">Address:</label>
+		<input type="text" class="form-control" id="address" placeholder="Enter address">
+	</div>
+	<div class="form-group">
+		<label for="username">Username:</label>
+		<input type="text" class="form-control" id="username" placeholder="Enter camera's username">
+	</div>
+	<div class="form-group">
+		<label for="password">Password:</label>
+		<input type="password" class="form-control" id="password" placeholder="Enter camera's password">
+	</div>
+	<button type="submit" class="btn btn-success">Add</button>
+</form>
 </div>
 
 </body>
