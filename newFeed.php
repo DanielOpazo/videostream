@@ -24,7 +24,7 @@ require('CameraFeed.php');
 			<li><a href="#">Home</a></li>
 			<li><a href=<?php $_SERVER["HTTP_HOST"];?>/stream.php>Live Feeds</a></li>
 			<li class="active"><a href=<?php $_SERVER["HTTP_HOST"];?>/newFeed.php>Add Feed</a></li> 
-			<li><a href="#">Remove Feed</a></li>
+			<li><a href=<?php $_SERVER["HTTP_HOST"];?>/removeFeed.php>Remove Feed</a></li>
 			<li><a href="#">About</a></li>
 			<li class="dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Careers
@@ -37,7 +37,7 @@ require('CameraFeed.php');
 			</li>
 		</ul>
 	</div>
-	</nav>
+</nav>
 <?php
 $nameStatus = $addressStatus = $usernameStatus = $passwordStatus = "";
 $name = $address = $username = $password = "";
@@ -93,7 +93,7 @@ function clean_input($data) {
 }
 ?>
 
-<div class="container">
+<div class="container-fluid">
 <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 	<div class="form-group <?php 
 		if (empty($name)) {
