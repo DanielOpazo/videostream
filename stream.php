@@ -30,7 +30,7 @@ require('CameraFeed.php');
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-      </ul>
+		</ul>
 	</div>
 	</nav>
 	
@@ -46,7 +46,7 @@ require('CameraFeed.php');
 					echo "<div class='row'>";
 					$temp = $count % 3;
 				}
-				echo "<div class='col-sm-4'><div class='bg-info'>".$feed->getName()."</div><div class='well'><div class='embed-responsive embed-responsive-4by3'><iframe src=".$feed->getFeedUrl()."></iframe><div class=\"overlay\"></div></div></div></div>";
+				echo "<div class='col-sm-4'><div class='bg-info text-center'><strong>".$feed->getName()."</strong></div><div class='well'><div class='embed-responsive embed-responsive-4by3'><iframe src=".$feed->getFeedUrl()."></iframe><div class=\"overlay\"></div></div></div></div>";
 				$count++;
 			}
 			if ((($count) % 3) != 0) {
