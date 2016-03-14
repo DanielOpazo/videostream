@@ -9,6 +9,7 @@ require('CameraFeed.php');
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel='stylesheet' type='text/css' href='streamstyle.css' />
 	<script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<!-- Latest compiled JavaScript -->
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -33,20 +34,13 @@ require('CameraFeed.php');
 			<a class="navbar-brand" href="#">Video Surveillance System Dashboard</a>
 		</div>
 		<ul class="nav navbar-nav">
-			<li><a href="#">Home</a></li>
 			<li><a href=<?php $_SERVER["HTTP_HOST"];?>/stream.php>Live Feeds</a></li>
 			<li><a href=<?php $_SERVER["HTTP_HOST"];?>/newFeed.php>Add Feed</a></li> 
 			<li class="active"><a href=<?php $_SERVER["HTTP_HOST"];?>/removeFeed.php>Remove Feed</a></li>
-			<li><a href="#">About</a></li>
-			<li class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Careers
-				<span class="caret"></span></a>
-				<ul class="dropdown-menu">
-					<li><a href="#">Dropdown Menu Maker</a></li>
-					<li><a href="#">List Item Creator</a></li>
-					<li><a href="#">Caterer</a></li>
-				</ul>
-			</li>
+			<li><a href="#">Recordings</a></li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 		</ul>
 	</div>
 </nav>
@@ -77,6 +71,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	}
 	?>
 </div>
-
+<div class="navbar navbar-fixed-bottom">
+	<footer class="container-fluid text-center">
+		<p>Carleton University 2016 Mobile Video Recording Apparatus Project 18</p>
+	</footer>
+	</div>
 </body>
 </html>
