@@ -27,17 +27,11 @@ require('CameraFeed.php');
 			<li class="active"><a href=<?php $_SERVER["HTTP_HOST"];?>/stream.php>Live Feeds</a></li>
 			<li><a href=<?php $_SERVER["HTTP_HOST"];?>/newFeed.php>Add Feed</a></li> 
 			<li><a href=<?php $_SERVER["HTTP_HOST"];?>/removeFeed.php>Remove Feed</a></li>
-			<li><a href="#">About</a></li>
-			<li class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Careers
-				<span class="caret"></span></a>
-				<ul class="dropdown-menu">
-					<li><a href="#">Dropdown Menu Maker</a></li>
-					<li><a href="#">List Item Creator</a></li>
-					<li><a href="#">Caterer</a></li>
-				</ul>
-			</li>
+			<li><a href="#">Recordings</a></li>
 		</ul>
+		<ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      </ul>
 	</div>
 	</nav>
 	
