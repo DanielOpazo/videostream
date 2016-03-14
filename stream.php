@@ -23,7 +23,6 @@ require('CameraFeed.php');
 			<a class="navbar-brand" href="#">Video Surveillance System Dashboard</a>
 		</div>
 		<ul class="nav navbar-nav">
-			<li><a href="#">Home</a></li>
 			<li class="active"><a href=<?php $_SERVER["HTTP_HOST"];?>/stream.php>Live Feeds</a></li>
 			<li><a href=<?php $_SERVER["HTTP_HOST"];?>/newFeed.php>Add Feed</a></li> 
 			<li><a href=<?php $_SERVER["HTTP_HOST"];?>/removeFeed.php>Remove Feed</a></li>
@@ -54,8 +53,10 @@ require('CameraFeed.php');
 				echo "</div>";
 			}
 		?>
-		<a href=<?php $_SERVER["HTTP_HOST"];?>/newFeed.php class="btn btn-info" role="button">Add New Feed</a>
-		<a href=<?php $_SERVER["HTTP_HOST"];?>/removeFeed.php class="btn btn-danger" role="button">Remove Feed</a>
+		<div class="text-center">
+			<a href=<?php $_SERVER["HTTP_HOST"];?>/newFeed.php class="btn btn-info" role="button">Add New Feed</a>
+			<a href=<?php $_SERVER["HTTP_HOST"];?>/removeFeed.php class="btn btn-danger" role="button">Remove Feed</a>
+		</div>
 	</div>	
 	
 	<div class="navbar navbar-fixed-bottom">
