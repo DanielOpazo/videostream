@@ -56,7 +56,12 @@ require('CameraFeed.php');
 		?>
 		<a href=<?php $_SERVER["HTTP_HOST"];?>/newFeed.php class="btn btn-info" role="button">Add New Feed</a>
 		<a href=<?php $_SERVER["HTTP_HOST"];?>/removeFeed.php class="btn btn-danger" role="button">Remove Feed</a>
-</div>	
+	</div>	
 	
+	<div class="navbar navbar-fixed-bottom">
+	<footer class="container-fluid text-center">
+		<p>Carleton University 2016 Mobile Video Recording Apparatus Project 18</p>
+	</footer>
+	</div>
 </body>
 </html>
