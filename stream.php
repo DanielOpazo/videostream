@@ -4,6 +4,7 @@ require('CameraFeed.php');
 ?>
 <html lang="en">
 	<head>
+		<link rel="icon" type="image/png" href="/16x16.png">
 		<title>Live Stream</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,6 +21,7 @@ require('CameraFeed.php');
 	<nav class="navbar navbar-inverse">
 	<div class="container-fluid">
 		<div class="navbar-header">
+			<a href="#" class="pull-left"><img src="/64x64.png"></a>
 			<a class="navbar-brand" href="#">Video Surveillance System Dashboard</a>
 		</div>
 		<ul class="nav navbar-nav">
