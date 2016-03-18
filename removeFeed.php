@@ -31,6 +31,7 @@ require('CameraFeed.php');
 <nav class="navbar navbar-inverse">
 	<div class="container-fluid">
 		<div class="navbar-header">
+			<a href="#" class="pull-left"><img src="/48x48.png"></a>
 			<a class="navbar-brand" href="#">Video Surveillance System Dashboard</a>
 		</div>
 		<ul class="nav navbar-nav">
