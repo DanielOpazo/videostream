@@ -44,6 +44,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$nameStatus = "Name is required";
 	}else {
 		$name = clean_input($_POST["name"]);
+		if (!preg_match("/^[a-zA-Z0-9]+$/", $name)) {
+			$name = "";
+			$nameStatus = "Name must be only characters and numbers";
+		}
 	}
 
 	if (empty($_POST["address"])) {
