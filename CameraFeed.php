@@ -32,6 +32,10 @@ class CameraFeed implements JsonSerializable {
 		return "http://".$this->username.":".$this->password."@".$this->address.":8080/stream";
 	}
 	
+	public function getRecordingUrl() {
+		return "http://".$this->address.":8000";
+	}
+	
 	public function jsonSerialize() {
 		return[
 			'name' => $this->name,

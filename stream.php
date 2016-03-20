@@ -28,7 +28,7 @@ require('CameraFeed.php');
 			<li class="active"><a href=<?php $_SERVER["HTTP_HOST"];?>/stream.php>Live Feeds</a></li>
 			<li><a href=<?php $_SERVER["HTTP_HOST"];?>/newFeed.php>Add Feed</a></li> 
 			<li><a href=<?php $_SERVER["HTTP_HOST"];?>/removeFeed.php>Remove Feed</a></li>
-			<li><a href="#">Recordings</a></li>
+			<li><a href=<?php $_SERVER["HTTP_HOST"];?>/recordings.php>Recordings</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
