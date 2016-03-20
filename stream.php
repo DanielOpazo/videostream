@@ -9,11 +9,11 @@ require('CameraFeed.php');
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<link rel='stylesheet' type='text/css' href='streamstyle.css' />
 		<script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 		<!-- Latest compiled JavaScript -->
-		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<!-- my javascript -->
 		<script type='text/javascript' src='streamjs.js'></script>
 	</head>
@@ -48,7 +48,7 @@ require('CameraFeed.php');
 					echo "<div class='row'>";
 					$temp = $count % 3;
 				}
-				echo "<div class='col-sm-4'><div class='bg-info text-center'><strong>".$feed->getName()."</strong></div><div class='well'><div class='embed-responsive embed-responsive-4by3'><iframe src=".$feed->getFeedUrl()."></iframe><div class=\"overlay\"></div></div></div></div>";
+				echo "<div class='col-sm-4'><div class='bg-info text-center'><strong>".$feed->getName()."</strong></div><div class='well text-center'><div class='embed-responsive embed-responsive-4by3'><iframe src=".$feed->getFeedUrl()."></iframe></div></div></div>";
 				$count++;
 			}
 			if ((($count) % 3) != 0) {
