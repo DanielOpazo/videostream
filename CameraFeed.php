@@ -28,6 +28,10 @@ class CameraFeed implements JsonSerializable {
 		return $this->password;
 	}
 
+	public function getImgFeedUrl() {
+		return "http://".$this->username.":".$this->password."@".$this->address.":8080/stream/video.mjpeg";
+	}
+	
 	public function getFeedUrl() {
 		return "http://".$this->username.":".$this->password."@".$this->address.":8080/stream";
 	}

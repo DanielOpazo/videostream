@@ -46,9 +46,9 @@ require('CameraFeed.php');
 						echo "</div>";
 					}
 					echo "<div class='row'>";
-					$temp = $count % 3;
 				}
-				echo "<div class='col-sm-4'><div class='bg-info text-center'><strong>".$feed->getName()."</strong></div><div class='well text-center'><div class='embed-responsive embed-responsive-4by3'><iframe src=".$feed->getFeedUrl()."></iframe></div></div></div>";
+				//echo "<div class='col-sm-6'><div class='bg-info text-center'><strong>".$feed->getName()."</strong></div><div class='well text-center'><div class='embed-responsive embed-responsive-4by3'><iframe class='embed-responsive-item' src=".$feed->getFeedUrl()."></iframe></div></div></div>";
+				echo "<div class='col-sm-4'><div class='bg-info text-center'><strong>".$feed->getName()."</strong></div><div class='well text-center'><img class='img-responsive' src=".$feed->getImgFeedUrl()." alt=\"unable to load camera\"></div></div>";
 				$count++;
 			}
 			if ((($count) % 3) != 0) {
