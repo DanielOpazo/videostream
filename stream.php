@@ -14,8 +14,6 @@ require('CameraFeed.php');
 		<script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 		<!-- Latest compiled JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-		<!-- my javascript -->
-		<script type='text/javascript' src='streamjs.js'></script>
 	</head>
 	<body>
 	<nav class="navbar navbar-inverse">
@@ -47,7 +45,6 @@ require('CameraFeed.php');
 					}
 					echo "<div class='row'>";
 				}
-				//echo "<div class='col-sm-6'><div class='bg-info text-center'><strong>".$feed->getName()."</strong></div><div class='well text-center'><div class='embed-responsive embed-responsive-4by3'><iframe class='embed-responsive-item' src=".$feed->getFeedUrl()."></iframe></div></div></div>";
 				echo "<div class='col-sm-4'><div class='bg-info text-center'><strong>".$feed->getName()."</strong></div><div class='well text-center'><img class='img-responsive' src=".$feed->getImgFeedUrl()." alt=\"unable to load camera\"></div></div>";
 				$count++;
 			}
